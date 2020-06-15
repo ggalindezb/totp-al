@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   end
 
   def verify_mfa
-    session[:user_id].present?
+    raise StandardError unless session[:user_id].present?
   end
 end
