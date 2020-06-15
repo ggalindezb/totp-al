@@ -1,0 +1,74 @@
+AllCops:
+  RubyInterpreters:
+    - ruby
+  Include:
+    - '**/*.rb'
+    - '**/*.gemfile'
+    - '**/*.gemspec'
+    - '**/*.jb'
+    - '**/*.jbuilder'
+    - '**/*.rake'
+    - '**/*.spec'
+  Exclude:
+    - 'bin/**'
+    - 'config/application.rb'
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - '.git/**/*'
+  DefaultFormatter: progress
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  StyleGuideBaseURL: https://github.com/rubocop-hq/ruby-style-guide
+  ExtraDetails: true
+  StyleGuideCopsOnly: false
+  EnabledByDefault: false
+  DisabledByDefault: false
+  UseCache: true
+  MaxFilesInCache: 20000
+  CacheRootDirectory: ~
+  AllowSymlinksInCacheRootDirectory: false
+  TargetRubyVersion: ~
+
+Layout/LineLength:
+  Max: 150
+
+Metrics/AbcSize:
+  Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - 'config/routes.rb'
+    - 'spec/**/*'
+Metrics/MethodLength:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  AutoCorrect: true
+  EnforcedStyle: compact
+Style/Documentation:
+  Enabled: false
+
+# Pending Cops
+# See: https://docs.rubocop.org/en/latest/versioning/
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+Style/ExponentialNotation:
+  Enabled: true
+Style/SlicingWithRange:
+  Enabled: true
