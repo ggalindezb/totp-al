@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'admin/landing'
+  get 'admin/verify'
+  post 'admin/authenticate'
   get 'admin/dashboard'
 
-  root to: 'admin/landing'
+  root to: 'admin#verify'
 end
